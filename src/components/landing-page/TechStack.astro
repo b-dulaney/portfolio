@@ -1,0 +1,100 @@
+---
+import HeadingTriangle from "../HeadingTriangle.astro";
+import AngularIcon from "../icons/angular-icon.astro";
+import DockerIcon from "../icons/docker-icon.astro";
+import GoIcon from "../icons/go-icon.astro";
+import NodeIcon from "../icons/node-icon.astro";
+import PostgresIcon from "../icons/postgres-icon.astro";
+import PythonIcon from "../icons/python-icon.astro";
+import ReactIcon from "../icons/react-icon.astro";
+import SvelteIcon from "../icons/svelte-icon.astro";
+import TailwindIcon from "../icons/tailwind-icon.astro";
+import TypescriptIcon from "../icons/typescript-icon.astro";
+---
+
+<div class="tech-bg"></div>
+<div class="logo-cloud grid-cols-2 md:!grid-cols-5 gap-1 w-full max-w-7xl p-4">
+  <span class="flex items-start justify-start w-full col-span-2 md:col-span-5">
+    <HeadingTriangle className="w-8 h-6" />
+    <h2 class="text-3xl text-center font-semibold text-cream font-mono">
+      Tech I Use
+    </h2>
+  </span>
+
+  <a class="logo-item" href="/">
+    <span><TypescriptIcon /></span>
+    <span>TypeScript</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><ReactIcon /></span>
+    <span>React</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><SvelteIcon /></span>
+    <span>Svelte</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><AngularIcon /></span>
+    <span>Angular</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><NodeIcon /></span>
+    <span>Node.js</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><GoIcon /></span>
+    <span>Go</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><PythonIcon /></span>
+    <span>Python</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><DockerIcon /></span>
+    <span>Docker</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><PostgresIcon /></span>
+    <span>PostgreSQL</span>
+  </a>
+  <a class="logo-item" href="/">
+    <span><TailwindIcon /></span>
+    <span>TailwindCSS</span>
+  </a>
+</div>
+
+<style>
+  .tech-bg {
+    position: absolute;
+    z-index: -1;
+    top: -10%;
+    bottom: -10%;
+    width: 100%;
+    background: linear-gradient(83.21deg, #15803d 0%, #bef264 100%);
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 70%);
+    mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 77%);
+  }
+  .logo-cloud {
+    @apply grid gap-2 md:gap-y-4 overflow-hidden;
+  }
+
+  /* === Logo Item (Child) === */
+
+  .logo-item {
+    @apply flex-auto text-center space-x-4 shadow;
+    /* Center Contents */
+    @apply flex justify-center items-center space-x-4;
+    /* Background */
+    @apply bg-stone-900 rounded-lg border border-stone-700;
+    /* Text */
+    @apply text-base font-bold text-cream;
+    /* Padding */
+    @apply p-4 md:py-8;
+  }
+
+  /* === States === */
+
+  a.logo-item {
+    @apply hover:brightness-110;
+  }
+</style>

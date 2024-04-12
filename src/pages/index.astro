@@ -1,0 +1,38 @@
+---
+import AboutMe from "../components/landing-page/Experience.astro";
+import Hero from "../components/landing-page/hero/Hero.astro";
+import Projects from "../components/landing-page/Projects.astro";
+import TechStack from "../components/landing-page/TechStack.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Brendan Dulaney | Full-Stack Engineer">
+  <main class="relative z-10 flex flex-1 flex-col">
+    <div class="relative z-10">
+      <div class="grid-bg min-h-screen absolute inset-0 z-10"></div>
+      <Hero />
+      <section class="relative flex justify-center w-full mt-12 md:mt-24">
+        <TechStack />
+      </section>
+      <div
+        class="w-full flex flex-col justify-center items-center mt-12 gap-10 p-4"
+      >
+        <AboutMe />
+        <Projects />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .grid-bg {
+    z-index: -25;
+    background-image: linear-gradient(to right, #373739 1px, transparent 1px),
+      linear-gradient(to bottom, #373739 1px, transparent 1px);
+    background-position: right -1px;
+    background-color: [#F2F1EC];
+    mask-image: radial-gradient(circle at 65% 0%, white, transparent 100%);
+    background-size: 23px 23px;
+    opacity: 0.2;
+  }
+</style>

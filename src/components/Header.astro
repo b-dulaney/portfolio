@@ -1,0 +1,27 @@
+---
+import SearchButton from "./SearchButton.astro";
+---
+
+<div
+  class="bg-stone-900 flex justify-end items-center gap-4 p-6 border-b-2 border-b-stone-700 w-full h-24 sticky top-0 z-30"
+>
+  <SearchButton />
+  <p
+    class="font-mono text-xl text-stone-200 hover:text-stone-50 font-bold hidden sm:block"
+  >
+    Resume
+  </p>
+  <p
+    class="font-mono text-xl text-stone-200 hover:text-stone-50 font-bold hidden sm:block"
+  >
+    Blog
+  </p>
+  <p
+    class="font-mono text-xl text-stone-200 hover:text-stone-50 font-bold hidden sm:block"
+  >
+    Contact
+  </p>
+  <button class="sm:hidden flex px-4 py-2"
+    ><img class="w-8 h-8" src="/menu.svg" /></button
+  >
+</div>

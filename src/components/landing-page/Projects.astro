@@ -1,0 +1,15 @@
+---
+import HeadingTriangle from "../HeadingTriangle.astro";
+import CardWithHeader from "../card/CardWithHeader.astro";
+---
+
+<section id="projects" class="w-full max-w-7xl p-4">
+  <div class="flex w-full justify-start items-start">
+    <HeadingTriangle className="w-8 h-6" />
+    <h2 class="text-3xl font-semibold text-cream font-mono">Projects</h2>
+  </div>
+  <div class="w-full grid grid-cols-1 md:grid-cols-2 py-4 gap-4">
+    <CardWithHeader title="PowderHound" />
+    <CardWithHeader title="SvelteKit Web Scraper" />
+  </div>
+</section>

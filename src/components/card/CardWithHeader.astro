@@ -1,0 +1,17 @@
+---
+import CardHeader from "./CardHeader.astro";
+
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<div
+  class="bg-stone-900 rounded border border-stone-700 shadow-md p-6 text-cream w-full"
+>
+  <div class="flex flex-col gap-4">
+    <CardHeader {title} />
+    <slot />
+  </div>
+</div>
